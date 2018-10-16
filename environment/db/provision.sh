@@ -25,3 +25,10 @@ sudo apt-get update
 
 # Install MongoDB
 sudo apt-get install -y mongodb-org=3.2.18 mongodb-org-server=3.2.18 mongodb-org-shell=3.2.18 mongodb-org-mongos=3.2.18 mongodb-org-tools=3.2.18
+
+
+sudo rm /etc/mongod.conf
+sudo ln -s /home/vagrant/environment/mongod.conf /etc/mongod.conf
+
+sudo systemctl restart mongod
+sudo systemctl enable mongod
